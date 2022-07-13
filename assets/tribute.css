@@ -1,3 +1,7 @@
+/**  Global  **/
+:root {
+  --primary: rgb(72, 182, 226);
+}
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Oleo+Script+Swash+Caps:wght@700&family=Source+Code+Pro:wght@300&display=swap');
 * {
   margin: 0;
@@ -7,108 +11,176 @@ body {
   background: url("https://getwallpapers.com/wallpaper/full/e/6/6/1201473-jedi-knight-wallpaper-2560x1600-screen.jpg");
   background-size: cover;
   background-position: center;
-  height: 100%;
-  width: 100%;
 }
-h1 {
-  text-align: center;
-  font-family: "papyrus", fantasy;
-  color: #00bfff;
-  font-size: 60px;
-  transform: skewx(-15deg);
-}
-h2 {
-  color: #00bfff;
-  text-align: center;
-  font-size: 60px;
-  font-family: 'Oleo Script Swash Caps', cursive;
-}
+
+
+/** Header **/
 #heading {
   background-color: black;
   background-size: auto;
-  color: skyblue;
+  color: var(--primary);
   font-size: 40px;
   font-family: 'Oleo Script Swash Caps', cursive;
   padding-bottom: 0px;
   padding: 20px 50px;
   width: 100%;;
-  float: left;
 }
-#tribute-wrapper {
-  padding: 0em;
-  display: grid;
-  grid-gap: 2em;
-  grid-template-columns: repeat(
-  auto-fit, minmax(250px, 1fr));
-}
-.tribute-container1 {
-  padding: 4em;
-  border-radius: .3em;
-  box-shadow: 10px 10px 30px rgba(14, 0, 0, 0.801);
-  background: url("https://getwallpapers.com/wallpaper/full/1/4/7/29914.jpg");
-  background-size: cover;
-}
-.tribute-container {
-  padding: 4em;
-  border-radius: .3em;
-  box-shadow: 10px 10px 30px rgba(14, 0, 0, 0.801);
-  background: url("https://getwallpapers.com/wallpaper/full/b/5/a/312221.jpg");
-  background-size: cover;
-}
-.tribute-container2 {
-  padding: 4em;
-  border-radius: .3em;
-  box-shadow: 10px 10px 30px rgba(14, 0, 0, 0.801);
- background:url("https://getwallpapers.com/wallpaper/full/a/1/8/194150.jpg");
-  background-size: cover;
-}
-#caption {
+
+header h1 {
   text-align: center;
-  margin-top: 12em;
-  font-size: 50px;
-  font-weight: bold;
-  color: #00bfff;
- }
- #img-caption {
-   font-size: 25px;
-   color: #00bfff;
-   text-align: center;
-   background-color: black;
-   background-size: cover;
- }
+  font-family: "papyrus", fantasy;
+  color:var(--primary);
+  font-size: 60px;
+  transform: skewx(-15deg);
+}
+
+header h2 {
+  color: var(--primary);
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+
+/** Main Tribue Items **/
+.tribute-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 1em;
+}
+
+.tribute-container {
+  border: 5px solid var(--primary);
+  border-color: var(--primary);
+  border-radius: .3em;
+  box-sizing: border-box;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 0 1 30%;
+  margin: 15px;
+  text-align: center;
+}
+
+.tribute-container ul {
+  list-style: none;
+}
+
+.memory {
+font-size: 50px;
+color: black;
+font-weight: 900;
+}
+
 #tribute-info {
   text-align: center;
   color: white;
   font-size: 25px;
   font-weight: bold;
 }
+
 .about-obi {
   color: white;
+  font-size: 40px;
   text-align: center;
-  font-size: 90px;
-  margin-top: 10px;
   font-family: 'Oleo Script Swash Caps', cursive;
 }
+
 .link-text {
   text-align: center;
-  margin-top: 5px;
+  font-size: 50px;
+  color: black;
 }
-  #image {
-    text-align: center;
-    display: block;
-    max-width: 100%;
+
+
+#tribute-link {
+  color: lightseagreen;
+  font-size: 35px;
+  font-weight: 900;
+  text-align: left !important;
+}
+
+#tribute-link:hover {
+  color: green;
+}
+
+/** Container Images **/
+.obi-photo {
+  background: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F11%2Frevenge-of-the-sith-2000.jpg&q=60);
+  background-size: cover;
+  background-position: center;
+}
+
+.stars {
+  background: url("https://getwallpapers.com/wallpaper/full/1/4/7/29914.jpg");
+  background-size: cover;
+}
+
+.action {
+  background: url(https://deadline.com/wp-content/uploads/2022/02/attack-of-clones.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/** Bottom Image With Figcaption **/
+#img-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#image {
+  max-width: 100%;
+  display: block;
+}
+
+#img-caption {
+  font-size: 25px;
+  color: #00bfff;
+  text-align: center;
+  background-color: black;
+  background-size: cover;
+}
+
+
+@media screen and (max-width: 980px) {
+
+  .tribute-wrapper {
+    flex-direction: column;
   }
-  .links {
+
+  .tribute-container {
+    min-height: 300px;
+    min-width: 300px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  header h1,
+  header h2 {
     font-size: 25px;
-    color:black
+    text-align: left;
   }
-  #tribute-link {
-    color: lightseagreen;
-    font-size: 35px;
-    font-weight: 900;
+
+  .memory,
+  .link-text,
+  .about-obi {
+    font-size: 25px;
   }
-  #tribute-link:hover {
-    color: green;
+
+  #tribute-link,
+  #tribute-info {
+    font-size: 15px;
   }
- 
+
+  #image {
+    max-width: 300px;
+    max-height: 250px;
+  }
+}
+
 
